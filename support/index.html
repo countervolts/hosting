@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body class="background">
+    <div id="particles-js"></div> 
+    <div id="middle-section">
+        <div class="rectangle">
+            <h1 class="rectangle-heading">Support</h1>
+            <hr class="rectangle-separator">
+            <p id="output">Click on the Discord link to be redirected to my Discord account<br><br><br>Click on the resetter to reset your password to your account.</p>
+            <div class="button-container">
+                <a id="discord" class="button" href="https://discord.com/users/488368000055902228" target="_blank">Discord Link</a>
+                <a id="resetter" class="button" href="https://hosting.59problems.me/help/Password_Resetter.py" target="_blank">Resetter</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: '#ffffff'
+                },
+                size: {
+                    value: 3,
+                    random: true
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#ffffff',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 6
+                }
+            }
+        });
+    </script>
+</body>
+</html>

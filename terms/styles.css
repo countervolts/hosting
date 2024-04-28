@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+    background-color: #000; 
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.rectangle {
+    width: 80%;
+    height: 80%;
+    background-color: rgba(26, 26, 26, 0.8); 
+    border-radius: 10px;
+    border: 2px solid #999; 
+    box-shadow: 0 0 10px #999;
+}
+
+@keyframes shoot {
+    0% { left: 100%; opacity: 1; }
+    100% { left: -50%; opacity: 0; }
+}
