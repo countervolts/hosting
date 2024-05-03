@@ -26,9 +26,6 @@ jobs:
       - name: Manually review vulnerabilities
         run: npm audit
 
-      - name: Fix vulnerabilities automatically
-        run: npm audit fix --force 
-
       - name: Build
         run: npm run build
 
