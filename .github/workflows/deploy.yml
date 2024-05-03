@@ -18,19 +18,19 @@ jobs:
           node-version: '14'
 
       - name: Remove existing package-lock.json
-        run: echo "Removing existing package-lock.json" && rm -f package-lock.json
+        run: rm -f package-lock.json
 
       - name: Install dependencies
-        run: echo "Installing dependencies" && npm ci --prefer-offline
+        run: npm ci --prefer-offline
 
       - name: Manually review vulnerabilities
-        run: echo "Manually reviewing vulnerabilities" && npm audit
+        run: npm audit
 
       - name: Fix vulnerabilities automatically
-        run: echo "Fixing vulnerabilities automatically" && npm audit fix --force
+        run: npm audit fix --force
 
       - name: Build
-        run: echo "Building" && npm run build
+        run: npm run build
 
       - name: Deploy site to gh-pages branch
-        run: echo "Deploying site to gh-pages branch" && npx gh-pages -d build
+        run: npx gh-pages -d build
