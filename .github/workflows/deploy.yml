@@ -18,18 +18,19 @@ jobs:
           node-version: '14'
 
       - name: Remove existing package-lock.json
-        run: rm -f package-lock.json
+        run: echo "Removing existing package-lock.json" && rm -f package-lock.json
 
       - name: Install dependencies
-        run: npm install --prefer-offline
+        run: echo "Installing dependencies" && npm ci --prefer-offline
 
       - name: Manually review vulnerabilities
-        run: npm audit
+        run: echo "Manually reviewing vulnerabilities" && npm audit
+
+      - name: Fix vulnerabilities automatically
+        run: echo "Fixing vulnerabilities automatically" && npm audit fix --force
 
       - name: Build
-        run: npm run build
+        run: echo "Building" && npm run build
 
       - name: Deploy site to gh-pages branch
-        uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
-        with:
-          repo-token: ${{ secrets.GH_PAT }}
+        run: echo "Deploying site to gh-pages branch" && npx gh-pages -d build
