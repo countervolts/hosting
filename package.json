@@ -2,9 +2,6 @@
   "name": "hosting",
   "version": "1.2.1",
   "scripts": {
-    "minify-js": "npx uglifyjs *.js join/js/*.js -o dist/main.min.js",
-    "minify-css": "npx cssnano join/*.css terms/*.css welcome/*.css contact/*.css help/*.css support/*.css -o dist/main.min.css",
-    "build": "npm run minify-js && npm run minify-css",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "build": "npm install && npm run test && npm run build"
   }
 }
