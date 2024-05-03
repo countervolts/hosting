@@ -24,6 +24,10 @@ jobs:
       - name: Cache
         uses: actions/cache@v4.0.2
         with:
+          path: 
+          key: 
+          restore-keys: 
+          upload-chunk-size: 
           enableCrossOsArchive: false
           fail-on-cache-miss: false
           lookup-only: false
