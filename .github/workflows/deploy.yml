@@ -17,11 +17,14 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Check vulnerabilities and audit
-        run: npm i --package-lock-only && npm audit
+      - name: Update npm
+        run: npm install -g npm@latest
 
-      - name: Fix vulnerabilities
+      - name: Fix vulnerabilities automatically
         run: npm audit fix
+
+      - name: Manually review and fix vulnerabilities
+        run: npm audit
 
       - name: Install dependencies
         run: npm ci
