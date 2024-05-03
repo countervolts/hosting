@@ -25,7 +25,7 @@ jobs:
         uses: actions/cache@v4.0.2
         with:
           path: 
-          key: 
+          key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
           restore-keys: 
           upload-chunk-size: 
           enableCrossOsArchive: false
