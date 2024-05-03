@@ -1,4 +1,9 @@
 {
   "name": "hosting",
-  "version": "1.2.1"
+  "version": "1.2.1",
+  "scripts": {
+    "minify-js": "uglifyjs src/*.js -o dist/main.min.js",
+    "minify-css": "cssnano src/*.css dist/main.min.css",
+    "build": "npm run minify-js && npm run minify-css"
+  }
 }
