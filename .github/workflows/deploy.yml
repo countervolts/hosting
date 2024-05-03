@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Check vulnerabilities
+      - name: Check vulnerabilities and audit
         run: npm i --package-lock-only && npm audit
 
       - name: Install dependencies
