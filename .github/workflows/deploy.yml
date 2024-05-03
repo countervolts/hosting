@@ -18,10 +18,10 @@ jobs:
           node-version: '14'
 
       - name: Check vulnerabilities
-        run: npm audit
+        run: npm i --package-lock-only && npm audit
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build
         run: npm run build
