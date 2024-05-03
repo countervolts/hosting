@@ -18,13 +18,13 @@ jobs:
           node-version: '14'
 
       - name: Update npm
-        run: npm install -g npm@latest
+        run: npm install npm@latest
+
+      - name: Manually review vulnerabilities
+        run: npm audit
 
       - name: Fix vulnerabilities automatically
-        run: npm audit fix
-
-      - name: Manually review and fix vulnerabilities
-        run: npm audit
+        run: npm audit fix --force 
 
       - name: Install dependencies
         run: npm ci
