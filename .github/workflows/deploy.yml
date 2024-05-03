@@ -18,10 +18,15 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm ci --prefer-offline --no-audit
+        run: npm install
+
+      - name: Manually review vulnerabilities
+        run: npm audit
 
       - name: Build
-        run: npm run build && mv build/* . && rm -rf build/
+        run: npm run build
 
       - name: Deploy site to gh-pages branch
-        run: npx gh-pages --dist . --branch gh-pages --add
+        uses: alex-page/blazing-fast-gh-pages-deploy@main
+        with:
+          build_dir: build
