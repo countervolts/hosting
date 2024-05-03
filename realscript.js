@@ -19,13 +19,12 @@ for (let i = 0; i < text.length; i++) {
         };
 
         setTimeout(() => {
-            for (let j = 0; j < 10; j++) {
-                setTimeout(shuffle, j * 50);
-            }
+            intervalId = setInterval(shuffle, 50);
             setTimeout(() => {
+                clearInterval(intervalId);
                 span.textContent = text[i];
-            }, 500);
-        }, i * 500);
+            }, 1000); // shuffle each character for 1 second
+        }, i * 1000); // start shuffling each character 1 second after the previous one
 
         span.addEventListener('mouseover', function() {
             intervalId = setInterval(shuffle, 50);
