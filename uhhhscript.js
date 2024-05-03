@@ -167,13 +167,3 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight)
 }
 
-
-/*--------------------
-not created by me (countervolts) 100% of credit goes towards:
-
-Instagram: https://www.instagram.com/supahfunk/
-Dribbble: https://dribbble.com/supahfunk
-Twitter: https://twitter.com/supahfunk
-Codepen: https://codepen.io/supah/
-
---------------------*/
