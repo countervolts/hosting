@@ -1,7 +1,0 @@
-{
-  "name": "hosting",
-  "version": "1.2.1",
-  "scripts": {
-    "build": "npm install && npm run test && npm run build"
-  }
-}
