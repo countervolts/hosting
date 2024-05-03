@@ -1,5 +1,14 @@
 const target = document.querySelector('.big-text');
-const text = target.textContent;
+const generateString = () => {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    for (let i = 0; i < 16; i++) {
+        result += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return result;
+}
+const text = generateString();
+
 const possibleLower = 'abcdefghijklmnopqrstuvwxyz0123456789';
 const possibleUpper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
