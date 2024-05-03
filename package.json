@@ -2,8 +2,8 @@
   "name": "hosting",
   "version": "1.2.1",
   "scripts": {
-    "minify-js": "uglifyjs *.js join/js/*.js -o dist/main.min.js",
-    "minify-css": "cssnano join/*.css terms/*.css welcome/*.css contact/*.css help/*.css support/*.css -o dist/main.min.css",
+    "minify-js": "npx uglifyjs *.js join/js/*.js -o dist/main.min.js",
+    "minify-css": "npx cssnano join/*.css terms/*.css welcome/*.css contact/*.css help/*.css support/*.css -o dist/main.min.css",
     "build": "npm run minify-js && npm run minify-css"
   }
 }
